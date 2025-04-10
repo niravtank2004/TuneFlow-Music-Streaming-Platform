@@ -1,0 +1,131 @@
+/* Custom styles for the music player */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #4f46e5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Dark mode styles for range input */
+.dark input[type="range"] {
+  background: #374151;
+}
+
+.dark input[type="range"]::-webkit-slider-thumb {
+  background: #818cf8;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Mobile Footer Styles */
+  .fixed.bottom-0 {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  /* Show only song details and play controls */
+  .fixed.bottom-0 .flex.items-center {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Hide progress bar, volume, and other controls */
+  .fixed.bottom-0 .progress-container,
+  .fixed.bottom-0 .volume-control,
+  .fixed.bottom-0 .rewind-btn,
+  .fixed.bottom-0 .forward-btn {
+    display: none;
+  }
+
+  /* Adjust player controls spacing */
+  .fixed.bottom-0 .player-controls {
+    gap: 0.5rem;
+  }
+
+  .song-card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .player-controls {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+
+  .player-controls {
+    gap: 1.5rem;
+  }
+}
