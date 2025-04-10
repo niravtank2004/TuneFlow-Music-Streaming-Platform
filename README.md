@@ -25,16 +25,6 @@ A modern, responsive music streaming platform built with HTML, Tailwind CSS and 
 2. Open `index.html` in your web browser
 3. Start streaming music!
 
-## Project Structure
-
-```
-TuneFlow/
-├── index.html          # Main HTML file
-├── styles.css          # Custom CSS styles
-├── script.js           # JavaScript functionality
-└── README.md           # Project documentation
-```
-
 ## Features in Detail
 
 ### Navigation Bar
